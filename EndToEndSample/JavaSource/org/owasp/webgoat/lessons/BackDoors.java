@@ -129,7 +129,10 @@ public class BackDoors extends SequentialLessonAdapter
 			String userInput = s.getParser().getRawParameter(USERNAME, "");
 			if (!userInput.equals(""))
 			{
-				userInput = SELECT_ST + userInput;
+				
+				//userInput = SELECT_ST + userInput;
+				userInput = SELECT_ST + "XXX";
+				
 				String[] arrSQL = userInput.split(";");
 				Connection conn = DatabaseUtilities.getConnection(s);
 				Statement statement = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
